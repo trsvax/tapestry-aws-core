@@ -1,0 +1,13 @@
+<html t:type="layout" title="SimpleDB"
+      t:sidebarTitle="Current Time"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+      xmlns:p="tapestry:parameter">
+        <!-- Most of the page content, including <head>, <body>, etc. tags, comes from Layout.tml -->
+
+	<h3>Domains</h3>
+	<t:loop t:id="domains" value="domain">
+	<t:pagelink page="aws/simpleDB/domainMetadata" context="${domain}">${domain}</t:pagelink><br/>
+	</t:loop>
+	<t:pagelink page="aws/simpleDB/createDomain">Create Domain</t:pagelink>
+
+</html>

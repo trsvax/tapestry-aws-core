@@ -1,0 +1,20 @@
+<html t:type="layout" title="SES Index"
+      t:sidebarTitle="Current Time"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+      xmlns:p="tapestry:parameter">
+        <!-- Most of the page content, including <head>, <body>, etc. tags, comes from Layout.tml -->
+
+
+	<t:loop t:id="verifiedAddresses" value="emailAddress">
+		${emailAddress} <t:actionlink t:id="delete" context="emailaddress">delete</t:actionlink><br/>
+	</t:loop>
+
+	<t:form>
+            <t:label for="newEmailAddress"/>:
+            <t:textfield t:id="newEmailAddress" size="16"/>
+            <br/>
+            <input type="submit"/>
+    </t:form>
+ 
+
+</html>

@@ -24,6 +24,8 @@ import com.amazonaws.services.autoscaling.AmazonAutoScaling;
 import com.amazonaws.services.autoscaling.AmazonAutoScalingClient;
 import com.amazonaws.services.cloudwatch.AmazonCloudWatch;
 import com.amazonaws.services.cloudwatch.AmazonCloudWatchClient;
+import com.amazonaws.services.dynamodb.AmazonDynamoDB;
+import com.amazonaws.services.dynamodb.AmazonDynamoDBClient;
 import com.amazonaws.services.ec2.AmazonEC2;
 import com.amazonaws.services.ec2.AmazonEC2Client;
 import com.amazonaws.services.elasticloadbalancing.AmazonElasticLoadBalancing;
@@ -44,7 +46,6 @@ import com.amazonaws.services.sns.AmazonSNS;
 import com.amazonaws.services.sns.AmazonSNSClient;
 import com.amazonaws.services.sqs.AmazonSQS;
 import com.amazonaws.services.sqs.AmazonSQSClient;
-import com.trsvax.tapestry.aws.core.services.impl.AWSMailTransportImpl;
 
 /**
  * This module is automatically included as part of the Tapestry IoC Registry, it's a good place to
@@ -54,11 +55,16 @@ public class AWSCoreModule
 {
     public static void bind(ServiceBinder binder)
     {
-		binder.bind(AWSMailTransport.class,AWSMailTransportImpl.class);
+		//binder.bind(AWSMailTransport.class,AWSMailTransportImpl.class);
 		
 		binder.bind(AmazonS3.class, new ServiceBuilder<AmazonS3>() {  	   
 			public AmazonS3 buildService(ServiceResources serviceResources) {
 				return new AmazonS3Client( serviceResources.getService(AWSCredentials.class));
+			}
+		});
+		binder.bind(AmazonDynamoDB.class, new ServiceBuilder<AmazonDynamoDB>() {  	   
+			public AmazonDynamoDB buildService(ServiceResources serviceResources) {
+				return new AmazonDynamoDBClient( serviceResources.getService(AWSCredentials.class));
 			}
 		});
 		binder.bind(AmazonEC2.class, new ServiceBuilder<AmazonEC2>() {  	   

@@ -1,0 +1,17 @@
+<html t:type="layout" title="Create Topic"
+      t:sidebarTitle="Current Time"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+      xmlns:p="tapestry:parameter">
+        <!-- Most of the page content, including <head>, <body>, etc. tags, comes from Layout.tml -->
+
+
+	<t:form>
+		<t:label for="protocol"/>
+		<t:select t:id="protocol" model="literal:http,https,email,email-json,sqs"/>
+		<t:label for="endPoint"/>
+		<t:textField t:id="endPoint"/>
+		<input type="submit"/>
+	</t:form>
+
+
+</html>

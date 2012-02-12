@@ -1,0 +1,17 @@
+<html t:type="layout" title="DynamoDB Index"
+      t:sidebarTitle="Current Time"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+      xmlns:p="tapestry:parameter">
+        <!-- Most of the page content, including <head>, <body>, etc. tags, comes from Layout.tml -->
+
+	<h3>Items ${tablename}</h3>
+	<t:pagelink page="aws/dynamoDB/newItem" context="tableName">new</t:pagelink>
+	<br/>
+	<t:loop source="items" value="item">
+		<t:loop source="keys" value="key">
+			${key}:(${value})
+		</t:loop>
+		<br/>
+	</t:loop>
+
+</html>

@@ -1,0 +1,19 @@
+<html t:type="layout" title="SNS"
+      t:sidebarTitle="Current Time"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+      xmlns:p="tapestry:parameter">
+        <!-- Most of the page content, including <head>, <body>, etc. tags, comes from Layout.tml -->
+
+	<h3>Topics</h3>
+	<t:grid t:id="topics" row="topic" add="subscribe">
+	<p:subscribeCell>
+		<t:pagelink page="aws/sns/createSubscription" context="topic.topicArn">Subscribe</t:pagelink>
+	</p:subscribeCell>
+	</t:grid>
+	<t:pagelink page="aws/sns/createTopic">Create Topic</t:pagelink>
+	<h3>Subscriptions</h3>
+	<t:grid t:id="subscriptions"/>
+	<t:pagelink page="aws/sns/createSubscription">Create Subscription</t:pagelink>
+	
+
+</html>

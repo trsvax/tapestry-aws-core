@@ -1,0 +1,13 @@
+<html t:type="layout" title="Simple Queue Service"
+      t:sidebarTitle="Current Time"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+      xmlns:p="tapestry:parameter">
+        <!-- Most of the page content, including <head>, <body>, etc. tags, comes from Layout.tml -->
+
+	<h3>URLs</h3>
+	<t:loop t:id="urls" value="url">
+	<t:pagelink page="aws/sqs/queueAttributes" context="${url}">${url}</t:pagelink><br/>
+	</t:loop>
+	<t:pagelink page="aws/sqs/createQueue">Create Queue</t:pagelink>
+
+</html>

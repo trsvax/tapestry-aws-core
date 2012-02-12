@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html t:type="layout" title="AWS"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+      xmlns:p="tapestry:parameter">
+ 
+
+    <t:pagelink page="aws/ses">SES</t:pagelink><br/>
+    <t:pagelink page="aws/s3">S3</t:pagelink><br/>
+	<t:pagelink page="aws/iam">IAM</t:pagelink><br/>
+	<t:pagelink page="aws/ec2">EC2</t:pagelink><br/>
+	<t:pagelink page="aws/simpleDB">Simple DB</t:pagelink><br/>
+	<t:pagelink page="aws/sns">SNS</t:pagelink><br/>
+	<t:pagelink page="aws/rds">RDS</t:pagelink><br/>
+	<t:pagelink page="aws/elb">ELB</t:pagelink><br/>
+	
+	<t:pagelink page="aws/cloudwatch">CloudWatch</t:pagelink><br/>
+	<t:pagelink page="aws/autoscaling">AutoScaling</t:pagelink><br/>
+	<t:pagelink page="aws/dynamoDB">DynamoDB</t:pagelink><br/>
+
+</html>

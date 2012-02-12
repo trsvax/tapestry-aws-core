@@ -1,0 +1,10 @@
+<html t:type="layout" title="EC2 Index"
+      t:sidebarTitle="Current Time"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+      xmlns:p="tapestry:parameter">
+        <!-- Most of the page content, including <head>, <body>, etc. tags, comes from Layout.tml -->
+
+	<h3>Zones</h3>
+	<t:grid t:id="zones"/>
+
+</html>

@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.trsvax</groupId>
     <artifactId>tapestry-aws-core</artifactId>
-    <version>0.0.3-SNAPSHOT</version>
+    <version>1.3.14-SNAPSHOT</version>
     <packaging>jar</packaging>
     <name>tapestry-aws-core Tapestry 5 Application</name>
         <dependencies>
@@ -16,7 +16,7 @@
         <dependency>
         	<groupId>com.amazonaws</groupId>
         	<artifactId>aws-java-sdk</artifactId>
-        	<version>1.3.2</version>
+        	<version>1.3.14</version>
         </dependency>
         <!-- A dependency on either JUnit or TestNG is required, or the surefire plugin (which runs the tests)
 will fail, preventing Maven from packaging the WAR. Tapestry includes a large number
@@ -61,16 +61,16 @@ of testing facilities designed for use with TestNG (http://testng.org/), so it's
             </plugin>
 
            <plugin>
-           <groupId>org.apache.maven.plugins</groupId>
-           <artifactId>maven-jar-plugin</artifactId>
-           <configuration>
-           <archive>
-             <manifestEntries>
-               <Tapestry-Module-Classes>com.trsvax.tapestry.aws.core.services.AWSCoreModule</Tapestry-Module-Classes>
-             </manifestEntries>
-           </archive>
-           </configuration>
-       </plugin>
+	           <groupId>org.apache.maven.plugins</groupId>
+	           <artifactId>maven-jar-plugin</artifactId>
+	           <configuration>
+	           <archive>
+	             <manifestEntries>
+	               <Tapestry-Module-Classes>com.trsvax.tapestry.aws.core.services.AWSCoreModule</Tapestry-Module-Classes>
+	             </manifestEntries>
+	           </archive>
+	           </configuration>
+      		</plugin>
        
         <!-- Run the application using "mvn jetty:run" -->
             <plugin>
